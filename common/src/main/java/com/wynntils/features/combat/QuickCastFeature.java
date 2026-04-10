@@ -36,6 +36,9 @@ import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.InteractionHand;
 import net.neoforged.bus.api.SubscribeEvent;
 
+// Debug, Remove Later
+import com.wynntils.features.debug.QuickCastLogger;
+
 @ConfigCategory(Category.COMBAT)
 public class QuickCastFeature extends Feature {
     private static final int NO_PENDING_SPELL = -1;

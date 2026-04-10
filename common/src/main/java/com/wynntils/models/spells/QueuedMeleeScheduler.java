@@ -5,8 +5,10 @@
 package com.wynntils.models.spells;
 
 import com.wynntils.core.components.Models;
+import com.wynntils.features.debug.QuickCastLogger;
 import com.wynntils.models.character.type.ClassType;
 import com.wynntils.models.items.properties.ClassableItemProperty;
+import com.wynntils.models.items.properties.GearTypeItemProperty;
 import com.wynntils.models.items.properties.RequirementItemProperty;
 import com.wynntils.models.spells.type.CombatClickType;
 import com.wynntils.utils.mc.McUtils;
@@ -67,6 +69,9 @@ public final class QueuedMeleeScheduler {
         }
 
         ItemStack heldItem = McUtils.player().getItemInHand(InteractionHand.MAIN_HAND);
+        Optional<GearTypeItemProperty> ItemData = Models.Item.asWynnItemProperty(heldItem, GearTypeItemProperty.class);
+        QuickCastLogger.LOGGER.info(String.valueOf(ItemData));
+
         if (!ItemUtils.isWeapon(heldItem)) {
             return WeaponContext.invalid(InvalidWeaponReason.NOT_A_WEAPON);
         }

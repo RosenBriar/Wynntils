@@ -4,6 +4,7 @@ plugins {
 
 loom {
     accessWidenerPath = project(":common").loom.accessWidenerPath
+    loom.log4jConfigs.from "log4j-dev.xml"
 }
 
 architectury {

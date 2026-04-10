@@ -32,3 +32,6 @@ run/
 node_modules
 package-lock.json
 package.json
+log4j-dev.xml
+fabric/build.gradle
+common/src/main/java/com/wynntils/features/debug/QuickCastLogger.java
